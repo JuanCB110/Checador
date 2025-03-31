@@ -1,0 +1,10 @@
+/* Eliminamos los estilos predeterminados de Vite y aplicamos nuestros propios estilos */
+
+.app-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Otros estilos específicos de la aplicación pueden ir aquí */
