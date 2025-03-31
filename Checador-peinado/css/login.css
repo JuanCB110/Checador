@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    background-color: #F2F3F8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Asegura que el body ocupe toda la altura de la pantalla */
+    font-family: Arial, sans-serif;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    border-radius: 15px;
+    width: 30%;
+    max-width: 400px;
+    background-color: white;
+    padding: 20px; /* Añade un poco de padding para que no esté pegado a los bordes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Opcional: añade una sombra para mejor estética */
+}
+
+.login img {
+    height: 110px;
+    margin-bottom: 20px;
+}
+
+.login input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: red;
+}
+.login input:focus {
+    border-color: #454646;
+    box-shadow: 0 0 5px rgba(69, 70, 70, 0.2); /* Sombra suave */
+    outline: none;
+}
+
+.login a {
+    text-decoration: none;
+    color: #4285F4;
+    position: relative;
+    font-size: 14px;
+}
+
+.login a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    width: 0;
+    height: 1px;
+    background-color: #4285F4;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.login a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.login button {
+    background-color: #4285F4;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 12px;
+}
+
+.login button:hover {
+    background-color: #3367D6;
+}
+.login p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #454646;
+}
+
+@media (max-width: 600px) {
+    .login {
+        width: 80%;
+        max-width: 280px;
+        padding: 0px 15px;
+        height: 70vh;
+    }
+
+    .login img {
+        height: 90px; /* Reducir el tamaño del logo en móviles */
+    }
+
+    .login input {
+        font-size: 14px; /* Tamaño de letra más pequeño */
+        padding: 8px;
+    }
+
+    .login button {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+
+    .login p {
+        font-size: 12px;
+    }
+}

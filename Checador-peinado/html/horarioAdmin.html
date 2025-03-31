@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/principal.css">
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        <title>Horario Administrador</title>
+    </head>
+    <body id="body">
+        <div class="l-navbar" id="navbar">
+            <nav class="nav">
+                <div>
+                    <a href="#" class="nav__logo">
+                        <img src="../assets/star.svg" alt="" class="nav__logo-icon">
+                        <span class="nav__logo-text">Admin</span>
+                    </a>
+    
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class='bx bx-chevron-right'></i>
+                    </div>
+    
+                    <ul class="nav__list">
+                        <a href="menuAdmin.html" class="nav__link">
+                            <i class='bx bx-grid-alt nav__icon'></i>
+                            <span class="nav__text">Menu</span>
+                        </a>
+                        <a href="horarioAdmin.html" class="nav__link active">
+                            <i class='bx bx-calendar-star nav__icon'></i>
+                            <span class="nav__text">Horario</span>
+                        </a>
+                        <a href="gruposAdmin.html" class="nav__link">
+                            <i class='bx bx-buildings nav__icon'></i>
+                            <span class="nav__text">Grupos</span>
+                        </a>
+                        <a href="usuariosAdmin.html" class="nav__link">
+                            <i class='bx bx-user nav__icon' ></i>
+                            <span class="nav__text">Usuarios</span>
+                        </a>
+                        <a href="materiasAdmin.html" class="nav__link">
+                            <i class='bx bx-book-bookmark nav__icon' ></i>
+                            <span class="nav__text">Materia</span>
+                        </a>
+                        
+                        <a href="temariosAdmin.html" class="nav__link">
+                            <i class='bx bx-bookmark nav__icon'></i>
+                            <span class="nav__text">Temario</span>
+                        </a>              
+                    </ul>
+                </div>
+                <a href="../index.html" class="nav__link">           
+                    <i class='bx bx-log-out-circle nav__icon'></i>
+                    <span class="nav__text">Salir</span>
+                </a>
+            </nav>
+        </div>
+
+        <section>
+            <div class="barra-opciones">
+                <a href="#" class="activo">Ver</a>
+                <a href="horarioAdminAñadir.html">Agregar</a>
+            </div>
+
+            <div class="menu-desplegable">
+                <h1>Seleccione el horario del grupo que quiera ver</h1>
+                <select name="Grupo" id="">
+                    <option value="401">401</option>
+                </select>
+            </div>
+            <div class="horario-ver">
+                <table>
+                    <tr>
+                        <th colspan="3">GRUPO X - IS - EDIFICIO BX ::::::: AULA X</th>
+                    </tr>
+                    <tr>
+                        <th>Hora</th>
+                        <th>Materias</th>
+                        <th>Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>08:00 - 09:00</td>
+                        <td>Materia 1</td>
+                        <td>Profesor 1</td>
+                    </tr>
+                    <tr>
+                        <td>09:00 - 10:00</td>
+                        <td>Materia 2</td>
+                        <td>Profesor 2</td>
+                    </tr>
+                    <tr>
+                        <td>10:00 - 11:00</td>
+                        <td>Materia 3</td>
+                        <td>Profesor 3</td>
+                    </tr>
+                    <!-- Agregar más filas según sea necesario -->
+                </table>
+            </div><br>
+            <div class="form-usuarios" style="background: none; align-items: center;">
+                <button class="boton-global-rojo" style="width: 60%;">Elimnar horario</button>
+            </div>
+            <br><br>
+            <form class="form-usuarios">
+                <h1>Checador de asistencia de los maestros</h1>
+                <input type="date">
+                <h1>Seleccione la materia</h1>
+                <select name="" id="">
+                    <option value="">NTIC</option>
+                </select>
+                <h1>el maestro asistio?</h1>
+                <div class="check">
+                    <label for="">Marque la casilla si el maestro asistio</label>
+                    <input type="checkbox">
+                </div>
+                    <button class="boton-global">Guardar</button>
+            </form>
+            <br>
+        </section>
+    </body>
+
+<script src="../js/sidebar.js"></script>
+<script src="../js/barraOpciones.js"></script>
+</html>

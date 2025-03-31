@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/principal.css">
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        <title>Usuarios Administrador</title>
+    </head>
+    <body id="body">
+        <div class="l-navbar" id="navbar">
+            <nav class="nav">
+                <div>
+                    <a href="#" class="nav__logo">
+                        <img src="../assets/star.svg" alt="" class="nav__logo-icon">
+                        <span class="nav__logo-text">Admin</span>
+                    </a>
+    
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class='bx bx-chevron-right'></i>
+                    </div>
+    
+                    <ul class="nav__list">
+                        <a href="menuAdmin.html" class="nav__link">
+                            <i class='bx bx-grid-alt nav__icon'></i>
+                            <span class="nav__text">Menu</span>
+                        </a>
+                        <a href="horarioAdmin.html" class="nav__link">
+                            <i class='bx bx-calendar-star nav__icon'></i>
+                            <span class="nav__text">Horario</span>
+                        </a>
+                        <a href="gruposAdmin.html" class="nav__link">
+                            <i class='bx bx-buildings nav__icon'></i>
+                            <span class="nav__text">Grupos</span>
+                        </a>
+                        <a href="usuariosAdmin.html" class="nav__link active">
+                            <i class='bx bx-user nav__icon' ></i>
+                            <span class="nav__text">Usuarios</span>
+                        </a>
+                        <a href="materiasAdmin.html" class="nav__link">
+                            <i class='bx bx-book-bookmark nav__icon' ></i>
+                            <span class="nav__text">Materia</span>
+                        </a>
+                        
+                        <a href="temariosAdmin.html" class="nav__link">
+                            <i class='bx bx-bookmark nav__icon'></i>
+                            <span class="nav__text">Temario</span>
+                        </a>              
+                    </ul>
+                </div>
+                <a href="../index.html" class="nav__link">           
+                    <i class='bx bx-log-out-circle nav__icon'></i>
+                    <span class="nav__text">Salir</span>
+                </a>
+            </nav>
+        </div>
+        <section>
+            <div class="barra-opciones">
+                <a href="#" class="activo">Editar</a>
+                <a href="usuariosAdminAñadir.html">Añadir</a>
+            </div>
+
+            <!-- Buscar al usuario con su numero de cuenta -->
+            <form action="" class="form-usuarios" style="margin-bottom: 30px;">
+                <h1>Para poder ver o editar un usuario es necesario contar con un numero de cuenta</h1>
+                <div class="busqueda">
+                    <input type="number" placeholder="Ingrese el numero de cuenta">
+                    <button class="boton-global">Buscar</button>
+                </div>
+                <h1>Datos del usuario</h1>
+                <input type="number" placeholder="Numero de cuenta">
+                <input type="text" name="NombreCompletoUsuario" id="" placeholder="Nombre del usuario">
+                <input type="email" placeholder="Correo Electronico">
+                <input type="password" placeholder="Contraseña">
+                <label for="">Rol del usuario</label>
+                <select name="" id="">
+                    <option value="">Alumno</option>
+                    <option value="">Jefe de grupo</option>
+                    <option value="">Coordinador</option>
+                    <option value="">Maestro</option>
+                    <option value="">Administrador</option>
+                </select>
+                <div class="busqueda" style="flex-direction:row-reverse ;">
+                    <button class="boton-global">Guardar</button>
+                    <button class="boton-global-rojo">Eliminar</button>
+                </div>
+            </form>
+        </section>
+    </body>
+<script src="../js/barraOpciones.js"></script>
+<script src="../js/sidebar.js"></script>
+</html>

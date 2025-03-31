@@ -1,0 +1,437 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap");
+/*===== VARIABLES CSS Y SASS =====*/
+/*Varibles sass*/
+/*Variables css*/
+/*===== Colores =====*/
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+:root {
+  --first-color: #fff;
+  --second-color: #4285F4;
+  --white-color: #EDEDED;
+  --text: #454646;
+}
+
+/*===== Fuente y tipografia =====*/
+:root {
+  --body-font: 'Quicksand', sans-serif;
+  --small-font-size: 0.875rem;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --small-font-size: 0.938rem;
+  }
+}
+
+/*===== z index =====*/
+:root {
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+/*===== BASE =====*/
+*, ::before, ::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 1rem 0 0 5rem;
+  font-family: var(--body-font);
+  background-color: var(--white-color);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+h1 {
+  margin: 0;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*=====  NAV =====*/
+.l-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 56px;
+  height: 100vh;
+  background-color: var(--first-color);
+  padding: 1.25rem .5rem 2rem;
+  -webkit-transition: .5s;
+  transition: .5s;
+  z-index: var(--z-fixed);
+}
+
+.nav {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+}
+
+.nav__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2rem;
+  padding: 0 .5rem;
+}
+
+.nav__logo-icon {
+  margin-right: 1.2rem;
+}
+
+.nav__logo-text {
+  color:var(--text);
+  font-weight: 700;
+}
+
+.nav__toggle {
+  position: absolute;
+  top: 1.10rem;
+  right: -.6rem;
+  width: 18px;
+  height: 18px;
+  background-color: var(--second-color);
+  border-radius: 50%;
+  font-size: 1.25rem;
+  color: var(--first-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.nav__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: .5rem;
+  margin-bottom: 1rem;
+  border-radius: .5rem;
+  color: var(--text);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.nav__link:hover {
+  background-color: var(--second-color);
+  color: var(--first-color);
+}
+
+.nav__icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.nav__text {
+  font-weight: 700;
+}
+
+/*Show menu*/
+.show {
+  width: 168px;
+}
+
+/*Rotate toggle*/
+.rotate {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+/*Active links menu*/
+.active {
+  background-color: var(--second-color);
+  color: var(--first-color);
+}
+
+/*Add padding body*/
+.expander {
+  padding: 1rem 0 0 12rem;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+
+/*! CSS Objetos globales  */
+.barra-opciones{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  width: 20%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  border: solid 1px var(--second-color);
+}
+.barra-opciones a{
+  background-color: #fff;
+  color: var(--text);
+  border: none;
+  padding: 10px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 100%;
+  border-radius: 10px;
+  font-family:sans-serif ;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.barra-opciones a:hover{
+  background-color: #c5c5c5;
+}
+.barra-opciones a.activo{
+  background-color: var(--second-color);
+  color: #fff;
+}
+  /* Botones normales */
+  .boton-global {
+    background-color: #fff;
+    color: var(--second-color);
+    border: solid 1px var(--second-color);
+    border-radius: 5px;
+    padding: 2px 10px;
+    font-size: 16px; 
+    cursor: pointer;  
+    transition: all 0.3s ease;
+}
+
+.boton-global:hover {
+    background-color: var(--second-color);
+    color: #fff;
+}
+
+.boton-global-rojo {
+  background-color: #fff;
+  color: red;
+  border: solid 1px red;
+  border-radius: 5px;
+  padding: 2px 10px;
+  font-size: 16px; 
+  cursor: pointer;  
+  transition: all 0.3s ease;
+}
+
+.boton-global-rojo:hover {
+  background-color: red;
+  color: #fff;
+}
+.busqueda{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.busqueda input{
+  width: 90%;
+}
+
+
+/** ===== CSS MENU ADMIN ===== */
+
+/*? ========= Seccion 1 Menu de opciones ==========  */
+.menu-admin {
+  font-family: sans-serif;
+  color: var(--text);
+  padding: 20px;
+}
+
+.menu-admin h1 {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  font-size: 35px;
+  color: var(--text);
+}
+
+.tarjetas-menu-admin {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Espacio entre tarjetas */
+}
+
+.tarjeta {
+  width: calc(33.33% - 20px); /* Para que quepan 3 por fila */
+  max-width: 350px; /* Evita que sean demasiado grandes */
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+}
+
+
+.tarjeta a {
+  text-decoration: none;
+  color: var(--white-color);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 700;
+  border-radius: 15px;
+  background-color: var(--second-color);
+  transition: all 0.3s ease;
+}
+.tarjeta a:hover {
+  background-color: #3369c1;
+}
+.tarjeta i {
+  font-size: 40px;
+  margin-right: 10px;
+}
+
+/*? ======== Seccion 2 Horario ==========  */
+
+.menu-desplegable{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu-desplegable h1{
+  color: var(--text);
+  margin-bottom: 15px;
+}
+.menu-desplegable select{
+  width: 10%;
+  border: solid 1px var(--second-color);
+  border-radius: 5px;
+  font-size: 15px;
+  color: var(--text);
+}
+
+.horario-ver{
+  background-color: #fff;
+  width: 70%;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  margin-top: 30px;
+  height: 50vh;
+  border-radius: 10px;
+}
+.horario-ver h1{
+  color: var(--text);
+  margin: auto;
+}
+
+/*? ======== Seccion 3 Agregar Usuario ==========  */
+.form-usuarios{
+  background-color: #fff;
+  width: 50%;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  gap: 40px;
+  padding: 25px;
+  border-radius: 10px;
+}
+.form-usuarios h1{
+  color: var(--text);
+  text-align: center;
+}
+.form-usuarios input{
+  border: solid 1px var(--text);
+  padding: 5px ;
+  border-radius: 5px;
+  font-size: 15px ;
+}
+.form-usuarios label{
+  color: var(--text);
+  font-family: sans-serif;
+}
+.form-usuarios select{
+  border: solid 1px var(--text);
+  font-size: 15px;
+  padding: 5px;
+  border-radius: 5px;
+  color: var(--text);
+}
+
+
+/*? ======== Seccion 4 agregar materia =========  */
+
+
+/*? ============ Seccion 5 agregar Temario ===========  */
+.temario{
+  display: flex;
+  flex-direction:column ;
+  width: 50%;
+  align-items: center;
+  margin: auto;
+  gap: 30px;
+  background-color: #fff;
+  padding: 25px;
+  border-radius:10px ;
+}
+.temario h1{
+  color: var(--text);
+}
+.temario select{
+  color: var(--text);
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px var(--text);
+  width: 20%;
+  font-size: 15px;
+}
+.temario input{
+  color: var(--text);
+}
+
+
+
+
+
+
+/* ! Aqui ortega modifica los valores para que sea responsivo */
+@media (max-width: 600px) {
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/principal.css">
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        <title>Horario Administrador</title>
+    </head>
+    <body id="body">
+        <div class="l-navbar" id="navbar">
+            <nav class="nav">
+                <div>
+                    <a href="#" class="nav__logo">
+                        <img src="../assets/star.svg" alt="" class="nav__logo-icon">
+                        <span class="nav__logo-text">Checador</span>
+                    </a>
+    
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class='bx bx-chevron-right'></i>
+                    </div>
+    
+                    <ul class="nav__list">
+                        <a href="#" class="nav__link active">
+                            <i class='bx bx-calendar-star nav__icon'></i>
+                            <span class="nav__text">Horario</span>
+                        </a>
+                    </ul>
+                </div>
+                <a href="../index.html" class="nav__link">           
+                    <i class='bx bx-log-out-circle nav__icon'></i>
+                    <span class="nav__text">Salir</span>
+                </a>
+            </nav>
+        </div>
+
+        
+        <section>
+            <div class="form-usuarios" style="background: none;">
+                <h1>Bienvenido @UserChecador</h1>
+                <label for="">Seleccione al maestro que desea ver su horario</label>
+                <select name="" id="">
+                    <option value="">Miguel Mendivil</option>
+                </select>
+                <label for="">Seleccione la semana que desea ver o registrar</label>
+                <select name="" id="">
+                    <option value="">Semana 1</option>
+                </select>
+            </div>
+
+            
+
+            <div class="horario-ver">    
+                <table>
+                    <tr>
+                        <th colspan="3">HORARIO DE MIGUEL MENDIVIL</th>
+                    </tr>
+                    <tr>
+                        <th>Hora</th>
+                        <th>Materias</th>
+                        <th>Aula</th>
+                    </tr>
+                    <tr>
+                        <td>08:00 - 09:00</td>
+                        <td>Materia 1</td>
+                        <td>Aula 1</td>
+                    </tr>
+                    <tr>
+                        <td>09:00 - 10:00</td>
+                        <td>Materia 2</td>
+                        <td>Aula 2</td>
+                    </tr>
+                    <tr>
+                        <td>10:00 - 11:00</td>
+                        <td>Materia 3</td>
+                        <td>Aula 3</td>
+                    </tr>
+                    <!-- Agregar más filas según sea necesario -->
+                </table>
+            </div><br>
+            <div class="form-usuarios" style="background: none; align-items: center;">
+            </div>
+            <br><br>
+            <form class="form-usuarios">
+                <h1>Checador de asistencia de los maestros</h1>
+                <input type="date">
+                <h1>Seleccione la hora</h1>
+                <select name="" id="">
+                    <option value="">13:00 - 14:00</option>
+                </select>
+                <h1>el maestro asistio?</h1>
+                <div class="check">
+                    <label for="">Marque la casilla si el maestro asistio</label>
+                    <input type="checkbox">
+                </div>
+                    <button class="boton-global">Guardar</button>
+            </form>
+            <br>
+        </section>
+    </body>
+
+<script src="../js/sidebar.js"></script>
+<script src="../js/barraOpciones.js"></script>
+</html>
